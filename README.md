@@ -1,3 +1,10 @@
+# Stock-Trade API with Bun.sh and Elysia
+
+API implemented with bun.sh and Elysia. 
+
+Status: in construction.
+
+
 # Elysia with Bun runtime
 
 ## Getting Started
