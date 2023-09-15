@@ -1,7 +1,21 @@
 import { Elysia } from "elysia";
 
-const app = new Elysia().get("/", () => "Hello Elysia").listen(3000);
+const PORT = process.env.PORT || 3030;
 
-console.log(
-  `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
-);
+
+const start = async () => {
+  try {
+    
+    const app = new Elysia()
+      .get("/", () => "Hello Elysia")
+      .listen(PORT);
+
+      console.log(`\n ### 🦊 Elysia is running at ${app?.server?.hostname}:${app?.server?.port} ###`)
+  } catch (error) {
+    console.log("XXX Error during server connection: ", error)
+  }
+}
+
+start();
+
+
