@@ -1,11 +1,12 @@
 import { Elysia } from "elysia";
+import connectDB from "./config/mongo";
 
 const PORT = process.env.PORT || 3030;
 
 
 const start = async () => {
   try {
-    
+    await connectDB();
     const app = new Elysia()
       .get("/", () => "Hello Elysia")
       .listen(PORT);
